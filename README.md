@@ -11,10 +11,10 @@ The SiteMesh filter applies a yellow background to the `body` tag of the html. S
 1. First build SiteMesh. Navigate to root directory, "sitemesh3-jetty-async" and build sitemesh with `gradle jar`
 2. Navigate to "sitemesh3-jetty-async" and type `mvn jetty:run`
 3. **Proxy** - decorating proxied content can be tested with this url: [http://localhost:8080/jetty](http://localhost:8080/jetty).
-..* **Result** - Blank page, `NullPointerException` in `Dispatcher.forward()`.
+  * **Result** - Blank page, `NullPointerException` in `Dispatcher.forward()`.
 4. **AsyncServlet** - testing against an asynchronous servlet, so no proxied content: [http://localhost:8080/async](http://localhost:8080/async).
-..* **Result** - Blank page, `NullPointerException` in `Dispatcher.forward()`.
+  * **Result** - Blank page, `NullPointerException` in `Dispatcher.forward()`.
 5. **Plain HTML** - to test against plain html, navigate to: [http://localhost:8080/test.html](http://localhost:8080/test.html)
-..* **Result** - Success, the page is styled, and the `Dispatcher.forward()` does not throw a `NullPointerException` in this case.
+  * **Result** - Success, the page is styled, and the `Dispatcher.forward()` does not throw a `NullPointerException` in this case.
 6. **Tomcat** - to test the AsyncServlet in Tomcat, generate the war with `mvn package` deploy it to Tomcat, and navigate to [http://localhost:8080/sitemesh3-jetty-async-sitemesh3-jetty-async-0.1-SNAPSHOT/async](http://localhost:8080/sitemesh3-jetty-async-sitemesh3-jetty-async-0.1-SNAPSHOT/async)
-..* **Result** - Success, the AsyncServlet's page is styled.
+  * **Result** - Success, the AsyncServlet's page is styled.
