@@ -1,0 +1,1 @@
+mvn install:install-file -DgroupId=org.sitemesh -DartifactId=sitemesh -Dversion=3.0.1-campus-01-SNAPSHOT -Dpackaging=jar -Dfile=sitemesh/build/libs/sitemesh-3.0.1-campus-01-SNAPSHOT.jar -DgeneratePom=true

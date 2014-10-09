@@ -1,0 +1,8 @@
+# pack-refs with: peeled fully-peeled 
+766c7f6a9d627a4b33bbf56dead00ca3480fed1f refs/remotes/origin/master
+ceb447a4fe45f46c2f3c89f949b4e46f9e6dfcfa refs/tags/3.0.0
+^b825e1b41bc28aa0f410c6ee7a4ddff8e1b6c3ce
+2d5b35c5e16419e7f8c944407bf7a8c94dcf57bb refs/tags/sitemesh-3.0-alpha-1
+^e8396163560db795c248276ef8d86f30e59bf89c
+7999c123d0826b49b6c782109e01b2c90c3768e2 refs/tags/sitemesh-3.0-alpha-2
+^c5e3fd791b0512b1aca3133ec7b7cdd7960b1aa1

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+    <display-name>Sitemesh3 Jetty 9 Async</display-name>
+
+    <!-- Jetty Proxy Servlet -->
+    <servlet>
+        <servlet-name>proxy</servlet-name>
+        <servlet-class>org.eclipse.jetty.proxy.ProxyServlet$Transparent</servlet-class>
+        <!--<servlet-class>org.eclipse.jetty.proxy.AsyncProxyServlet$Transparent</servlet-class>-->
+        <init-param>
+            <param-name>proxyTo</param-name>
+            <param-value>http://www.eclipse.org/jetty/documentation/current/</param-value>
+        </init-param>
+        <init-param>
+            <param-name>prefix</param-name>
+            <param-value>/jetty</param-value>
+        </init-param>
+        <async-supported>true</async-supported>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>proxy</servlet-name>
+        <url-pattern>/jetty/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- Plain Async Servlet -->
+    <servlet>
+        <servlet-name>asyncServlet</servlet-name>
+        <servlet-class>com.example.AsyncServlet</servlet-class>
+        <async-supported>true</async-supported>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>asyncServlet</servlet-name>
+        <url-pattern>/async/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- Filter: Sitemesh -->
+    <filter>
+        <filter-name>sitemesh</filter-name>
+        <filter-class>org.sitemesh.config.ConfigurableSiteMeshFilter</filter-class>
+        <async-supported>true</async-supported>
+    </filter>
+    <filter-mapping>
+        <filter-name>sitemesh</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+</web-app>
