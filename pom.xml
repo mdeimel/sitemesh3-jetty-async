@@ -22,12 +22,6 @@
     </license>
   </licenses>
 
-  <modules>
-    <module>sitemesh</module>
-    <module>sitemesh-examples-hellowebapp</module>
-      <module>sitemesh3-jetty-async</module>
-  </modules>
-
   <developers>
     <developer>
       <id>joewalnes</id>
