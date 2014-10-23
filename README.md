@@ -13,8 +13,9 @@ The following clean setup was used to test the build.
 * Gradle 1.10
 * Maven 2.2.1
 * Oracle JDK 1.8.0_25
+
 Some of these steps might be unnecessary, but this is how I got it to work on a clean system.
-1. 
+
 1. Navigate to root directory, "sitemesh3-jetty-async" and run `mvn clean package`
 2. Then build sitemesh with `gradle jar`
 3. Modify the deployment script with `chmod +x deployToMaven.sh`
