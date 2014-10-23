@@ -8,7 +8,7 @@ Essentially this is the SiteMesh3 repo. This is because SiteMesh3 does not suppo
 The SiteMesh filter applies a yellow background to the `body` tag of the html. So whenever content is properly "decorated" by SiteMesh, you'll see a (blindingly) yellow background.
 
 ### How to test?
-1. First build SiteMesh. Navigate to root directory, "sitemesh3-jetty-async" and build sitemesh with `gradle jar`
+1. First build SiteMesh. Tested with Gradle 1.10. Navigate to root directory, "sitemesh3-jetty-async" and build sitemesh with `gradle jar`
 2. Navigate to "sitemesh3-jetty-async" and type `mvn jetty:run`
 3. **Proxy** - decorating proxied content can be tested with this url: [http://localhost:8080/jetty](http://localhost:8080/jetty).
   * **Result** - Blank page, `NullPointerException` in `Dispatcher.forward()`.
